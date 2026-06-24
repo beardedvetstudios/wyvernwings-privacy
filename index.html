@@ -1,58 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wyvern Wings — Privacy Policy</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; 
-               margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { color: #1a1a2e; }
-        h2 { color: #444; margin-top: 30px; }
-        p  { line-height: 1.7; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Bearded Vet Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:     #39ff14;
+    --green-dim: #1a7a08;
+    --green-glow: rgba(57,255,20,0.18);
+    --dark:      #0d0d0d;
+    --card:      #111;
+    --text:      #e8e0d0;
+    --muted:     #7a7060;
+    --white:     #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--green-dim);
+  }
+
+  .nav-logo {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: var(--green);
+    text-decoration: none;
+    text-shadow: 0 0 10px var(--green);
+  }
+
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+
+  .nav-links a {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--green); }
+
+  .page-header {
+    padding: 140px 40px 60px;
+    text-align: center;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .page-eyebrow {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    color: var(--green);
+    letter-spacing: 0.2em;
+    margin-bottom: 16px;
+  }
+
+  .page-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(14px, 3vw, 24px);
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .page-date {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 40px 100px;
+  }
+
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1e1e1e;
+  }
+
+  .section p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    line-height: 1.8;
+  }
+
+  .section p strong { color: var(--text); font-weight: 600; }
+
+  .section ul {
+    list-style: none;
+    margin: 14px 0;
+  }
+
+  .section ul li {
+    font-size: 14px;
+    color: var(--muted);
+    padding: 6px 0 6px 20px;
+    position: relative;
+    line-height: 1.7;
+  }
+
+  .section ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+  }
+
+  .highlight-box {
+    background: var(--card);
+    border: 1px solid #1e1e1e;
+    border-left: 3px solid var(--green);
+    padding: 20px 24px;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+
+  .highlight-box p {
+    font-size: 14px;
+    color: var(--text);
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .contact-card {
+    background: var(--card);
+    border: 1px solid #1e1e1e;
+    border-top: 2px solid var(--green-dim);
+    padding: 28px 24px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+
+  .contact-card p { margin-bottom: 8px; }
+
+  .contact-card a {
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .contact-card a:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid #1a1a1a;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .footer-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: center; }
+
+  .footer-links a {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--green); }
+  .footer-copy { font-size: 11px; color: #444; }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 6px; }
+    .page-header { padding: 100px 20px 40px; }
+    .content { padding: 40px 20px 60px; }
+    footer { padding: 32px 20px; }
+  }
+</style>
 </head>
 <body>
-    <h1>Wyvern Wings — Privacy Policy</h1>
-    <p><em>Last updated: June 2026</em></p>
 
-    <h2>Overview</h2>
-    <p>Wyvern Wings is developed and published by [Steven Tuckett / Bearded Vet Studios]. 
-    We are committed to protecting your privacy. This policy explains what 
-    information is and is not collected when you play Wyvern Wings.</p>
+<nav>
+  <a href="https://beardedvetstudios.com" class="nav-logo">BVS</a>
+  <ul class="nav-links">
+    <li><a href="https://beardedvetstudios.com">Home</a></li>
+    <li><a href="https://beardedvetstudios.com/wyvernwings.html">Wyvern Wings</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+  </ul>
+</nav>
 
-    <h2>Data Collection</h2>
-    <p>Wyvern Wings does <strong>not</strong> collect any personal data. 
-    Specifically, we do not collect:</p>
+<div class="page-header">
+  <p class="page-eyebrow">// Legal</p>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-date">Last updated: June 2025</p>
+</div>
+
+<div class="content">
+
+  <div class="highlight-box">
+    <p>🛡️ Short version: We don't collect your personal data. Wyvern Wings saves your game progress locally on your device only. No accounts, no tracking, no ads.</p>
+  </div>
+
+  <div class="section">
+    <h2>Who We Are</h2>
+    <p>Bearded Vet Studios is an independent game development studio founded by a military veteran. We develop and publish mobile games for iOS and Android.</p>
+    <p><strong>Contact:</strong> beardedvetstudios@gmail.com</p>
+  </div>
+
+  <div class="section">
+    <h2>Information We Collect</h2>
+    <p>Bearded Vet Studios does <strong>not</strong> collect, store, or transmit any personal information from users of our games.</p>
+    <p>Specifically, we do not collect:</p>
     <ul>
-        <li>Names, email addresses, or contact information</li>
-        <li>Location data</li>
-        <li>Device identifiers</li>
-        <li>Usage analytics or crash reports</li>
-        <li>Payment information</li>
-        <li>Any other personal information</li>
+      <li>Your name, email address, or contact information</li>
+      <li>Device identifiers or advertising IDs</li>
+      <li>Location data</li>
+      <li>Usage analytics or behavioral data</li>
+      <li>Any financial or payment information</li>
+      <li>Photos, contacts, or other device content</li>
     </ul>
+  </div>
 
-    <h2>Local Save Data</h2>
-    <p>Wyvern Wings saves your game progress (coins, level, unlocked stages, 
-    settings, and achievements) locally on your device only. This data never 
-    leaves your device and is not transmitted to any server.</p>
+  <div class="section">
+    <h2>Game Save Data</h2>
+    <p>Wyvern Wings saves your game progress (stages cleared, coins, unlocked items, settings) <strong>locally on your device only</strong>. This data:</p>
+    <ul>
+      <li>Never leaves your device</li>
+      <li>Is not transmitted to our servers</li>
+      <li>Is not accessible to us or any third party</li>
+      <li>Is stored in encrypted format on your device</li>
+    </ul>
+  </div>
 
+  <div class="section">
     <h2>Third-Party Services</h2>
-    <p>Wyvern Wings does not use any third-party analytics, advertising, or 
-    tracking services. The game operates entirely offline and makes no network 
-    connections of any kind.</p>
+    <p>Our games do not integrate any third-party analytics, advertising, or tracking services. We do not use:</p>
+    <ul>
+      <li>Google Analytics or Firebase</li>
+      <li>Facebook SDK or Meta Pixel</li>
+      <li>Any advertising networks</li>
+      <li>Crash reporting services that collect personal data</li>
+    </ul>
+    <p>App store platforms (Apple App Store, Google Play Store) may collect their own data when you download or purchase our apps. Please refer to Apple's and Google's respective privacy policies for information about their data practices.</p>
+  </div>
 
+  <div class="section">
+    <h2>In-App Purchases</h2>
+    <p>Wyvern Wings is a paid application with no in-app purchases. All payment processing is handled entirely by Apple (App Store) or Google (Google Play). Bearded Vet Studios never receives, processes, or stores any payment or financial information.</p>
+  </div>
+
+  <div class="section">
     <h2>Children's Privacy</h2>
-    <p>Wyvern Wings does not collect data from any users, including children. 
-    The game is rated for ages 13 and up.</p>
+    <p>Our games do not knowingly collect any information from children under the age of 13. Since we collect no personal data from any user, our games are safe for players of all ages from a data privacy standpoint.</p>
+  </div>
 
+  <div class="section">
     <h2>Changes to This Policy</h2>
-    <p>If this policy ever changes, the updated version will be posted at 
-    this URL with a new effective date.</p>
+    <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date. Since we do not collect contact information, we cannot notify users directly of changes — please check this page periodically.</p>
+  </div>
 
-    <h2>Contact</h2>
-    <p>If you have any questions about this privacy policy, please contact ume 
-    at: [beardedvetstudios@gmail.com</p>
+  <div class="section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this privacy policy or our privacy practices, please contact us:</p>
+    <div class="contact-card">
+      <p><strong>Bearded Vet Studios</strong></p>
+      <p>Email: <a href="mailto:beardedvetstudios@gmail.com">beardedvetstudios@gmail.com</a></p>
+      <p>Website: <a href="https://beardedvetstudios.com">beardedvetstudios.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <ul class="footer-links">
+      <li><a href="https://beardedvetstudios.com">Home</a></li>
+      <li><a href="https://beardedvetstudios.com/wyvernwings.html">Wyvern Wings</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="mailto:beardedvetstudios@gmail.com">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Bearded Vet Studios. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
